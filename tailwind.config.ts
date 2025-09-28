@@ -22,6 +22,8 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          dark: "hsl(var(--primary-dark))",
+          light: "hsl(var(--primary-light))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,16 +49,46 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        // Trading colors
+        bull: "hsl(var(--bull))",
+        bear: "hsl(var(--bear))",
+        profit: "hsl(var(--profit))",
+        loss: "hsl(var(--loss))",
+        
+        // Text hierarchy
+        'text-primary': "hsl(var(--text-primary))",
+        'text-secondary': "hsl(var(--text-secondary))",
+        'text-muted': "hsl(var(--text-muted))",
+        
+        // Status colors
+        'status-pending': "hsl(var(--status-pending))",
+        'status-active': "hsl(var(--status-active))",
+        'status-executed': "hsl(var(--status-executed))",
+        'status-cancelled': "hsl(var(--status-cancelled))",
+        
+        // Chart colors
+        'chart-primary': "hsl(var(--chart-primary))",
+        'chart-secondary': "hsl(var(--chart-secondary))",
+        'chart-grid': "hsl(var(--chart-grid))",
+        'chart-area': "hsl(var(--chart-area))",
+        
+        // Additional semantic colors
+        warning: "hsl(var(--warning))",
+        info: "hsl(var(--info))",
+        neutral: "hsl(var(--neutral))",
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-bull': 'var(--gradient-bull)',
+        'gradient-bear': 'var(--gradient-bear)',
+      },
+      boxShadow: {
+        'card': 'var(--shadow-card)',
+        'card-hover': 'var(--shadow-card-hover)', 
+        'dropdown': 'var(--shadow-dropdown)',
       },
       borderRadius: {
         lg: "var(--radius)",
