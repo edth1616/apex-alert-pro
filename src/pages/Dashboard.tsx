@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { Wallet, TrendingUp, Bell, Target, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StatsCard } from "@/components/dashboard/StatsCard";
 import { BalanceChart } from "@/components/dashboard/BalanceChart";
 import { UpcomingAlerts } from "@/components/dashboard/UpcomingAlerts";
 import { LivePositions } from "@/components/dashboard/LivePositions";
+import { CreateAlertModal } from "@/components/alerts/CreateAlertModal";
 
 const Dashboard = () => {
+  const [isCreateAlertOpen, setIsCreateAlertOpen] = useState(false);
   return (
     <div className="space-y-8">
       {/* Header */}
@@ -14,9 +17,12 @@ const Dashboard = () => {
           <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
           <p className="text-muted-foreground">Welcome back, John. Here's your trading overview.</p>
         </div>
-        <Button className="bg-primary hover:bg-primary-dark text-primary-foreground gap-2">
+        <Button 
+          className="bg-primary hover:bg-primary-dark text-primary-foreground gap-2"
+          onClick={() => setIsCreateAlertOpen(true)}
+        >
           <Plus className="w-4 h-4" />
-          New Alert
+          Nueva Alerta
         </Button>
       </div>
 
@@ -73,6 +79,12 @@ const Dashboard = () => {
       <div>
         <LivePositions />
       </div>
+
+      {/* Create Alert Modal */}
+      <CreateAlertModal 
+        open={isCreateAlertOpen} 
+        onOpenChange={setIsCreateAlertOpen} 
+      />
     </div>
   );
 };
